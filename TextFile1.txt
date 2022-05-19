@@ -1,0 +1,6 @@
+﻿{"ts":"161",
+	"updates":
+	[
+		{"group_id":212716372,"type":"message_typing_state","event_id":"7b687182b83b3f49436cfd50f47cdbed09685345","v":"5.131","object":{"state":"typing","from_id":384829850,"to_id":-212716372}},
+		{"group_id":212716372,"type":"message_new","event_id":"4ac3cdd2defd900d8b4fe5afd52947a210bd000b","v":"5.131","object":{"message":{"date":1650891913,"from_id":384829850,"id":120,"out":0,"attachments":[],"conversation_message_id":116,"fwd_messages":[],"important":false,"is_hidden":false,"peer_id":384829850,"random_id":0,"text":"привет"},"client_info":{"button_actions":["text","vkpay","open_app","location","open_link","callback","intent_subscribe","intent_unsubscribe"],"keyboard":true,"inline_keyboard":true,"carousel":true,"lang_id":0}}}
+	]}
