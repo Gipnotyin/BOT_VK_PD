@@ -22,7 +22,9 @@ namespace VkBot2
     class Program
     {
         private static string AccessToken = "9fa214a9bd20a0f640e42bbeb142221f5686efaf9f62d53e1032723568ff77341ac77b5cf71ea7ca39272";
+
         private static string GroupUrl = "https://vk.com/public212716372";
+
         private static VkBot _bot;
         public static string chk(string s)
         {
@@ -57,6 +59,7 @@ namespace VkBot2
             return s;
         }
 
+        /***************************************отправка сообщений******************************************/
         private static void SendMessage(VkApi vk, long? peer, string message, MessageKeyboard MK = null)
         {
             Random rnd = new Random();
@@ -68,6 +71,10 @@ namespace VkBot2
                 Keyboard = MK
             });
         }
+
+        /***************************************************************************************************/
+
+        /*******************************************кнопки для клавиатуры***********************************/
 
         private static MessageKeyboard YesNo()
         {
@@ -162,9 +169,13 @@ namespace VkBot2
             key.AddButton("Очистить", "FalseAll", KeyboardButtonColor.Negative);
             return key.Build();
         }
+        /******************************************************************************************************/
+
+        /**********************************main функция********************************************************/
 
         static void Main(string[] args)
         {
+            /******************************************переменные*************************************/
             VkApi vkapi = new VkApi();
             Random rnd = new Random();
             WebClient webclient = new WebClient() { Encoding = Encoding.UTF8 };
@@ -194,6 +205,8 @@ namespace VkBot2
                 { "литература", false },
                 { "ви", false },
             };
+            /***********************************************************************************************/
+
             while (true) //цикл авторизации
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
@@ -226,6 +239,7 @@ namespace VkBot2
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"server: {lpresponce?.response?.server?.ToString()}\nkey: {lpresponce?.response?.key?.ToString()}\nts: {lpresponce?.response?.ts?.ToString()}");
 
+            /******************************************бесконечный цикл*************************************/
 
             while (true)//цикл обработки событий
             {
@@ -323,9 +337,6 @@ namespace VkBot2
                                 }
                             case "пока":
                                 SendMessage(vkapi, id, "Fuckin slave you", Prosto());
-                                break;
-                            case "танечка марченко":
-                                SendMessage(vkapi, id, "Вообще-то Танечка Марченкова!!!😡😡😡");
                                 break;
                             case "профильная математика":
                                 if (Items["математика"] == true)
