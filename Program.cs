@@ -338,6 +338,9 @@ namespace VkBot2
                             case "пока":
                                 SendMessage(vkapi, id, "Fuckin slave you", Prosto());
                                 break;
+                            case "танечка марченко":
+                                SendMessage(vkapi, id, "Вообще-то Танечка Марченкова!!!😡😡😡");
+                                break;
                             case "профильная математика":
                                 if (Items["математика"] == true)
                                 {
